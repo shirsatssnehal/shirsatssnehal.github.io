@@ -6,33 +6,34 @@
   <title>Snehal Shirsat | Renewable Energy Project Leadership</title>
   <style>
     :root{
-      --bg: #07131f;
-      --bg2: #0c1f2f;
-      --card: rgba(255,255,255,0.08);
-      --card-solid: #112437;
-      --text: #ecf4fb;
-      --muted: #b8c8d8;
-      --accent: #4fd1c5;
-      --accent2: #7dd3fc;
-      --gold: #f5c76b;
-      --white: #ffffff;
-      --shadow: 0 18px 50px rgba(0,0,0,0.28);
-      --border: rgba(255,255,255,0.10);
+      --bg:#f6f8fb;
+      --text:#173042;
+      --muted:#5f7485;
+      --primary:#0e5a57;
+      --primary-dark:#083c3a;
+      --secondary:#dff5f2;
+      --accent:#f4b860;
+      --white:#ffffff;
+      --card:#ffffff;
+      --border:#dce8ee;
+      --shadow:0 18px 45px rgba(16,41,56,0.10);
+      --radius:22px;
+      --max:1180px;
     }
 
     *{
-      box-sizing: border-box;
-      scroll-behavior: smooth;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
     }
 
     body{
       margin:0;
       font-family: Arial, sans-serif;
+      color:var(--text);
       background:
-        radial-gradient(circle at top left, rgba(79,209,197,0.15), transparent 30%),
-        radial-gradient(circle at top right, rgba(125,211,252,0.15), transparent 25%),
-        linear-gradient(135deg, var(--bg), var(--bg2));
-      color: var(--text);
+        radial-gradient(circle at top left, rgba(14,90,87,0.08), transparent 24%),
+        radial-gradient(circle at top right, rgba(244,184,96,0.12), transparent 22%),
+        linear-gradient(180deg, #f8fbfc 0%, #eef4f7 100%);
     }
 
     a{
@@ -41,424 +42,434 @@
     }
 
     .container{
-      width: min(1180px, 92%);
-      margin: 0 auto;
+      width:min(var(--max), 92%);
+      margin:0 auto;
     }
 
     .nav{
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(14px);
-      background: rgba(7,19,31,0.60);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(246,248,251,0.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(23,48,66,0.06);
     }
 
     .nav-inner{
       display:flex;
       justify-content:space-between;
       align-items:center;
-      padding: 18px 0;
+      padding:18px 0;
     }
 
-    .brand{
+    .logo{
+      font-size:22px;
       font-weight:700;
-      font-size:20px;
-      letter-spacing:0.5px;
+      color:var(--primary-dark);
+      letter-spacing:0.3px;
     }
 
     .menu{
       display:flex;
-      gap:20px;
+      gap:24px;
       flex-wrap:wrap;
-      color: var(--muted);
       font-size:14px;
+      color:var(--muted);
     }
 
     .menu a:hover{
-      color: var(--white);
+      color:var(--primary);
     }
 
     .hero{
-      padding: 90px 0 60px;
+      padding:84px 0 56px;
     }
 
     .hero-grid{
       display:grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 30px;
+      grid-template-columns:1.15fr 0.85fr;
+      gap:28px;
       align-items:center;
     }
 
     .eyebrow{
       display:inline-block;
-      padding: 8px 14px;
-      border: 1px solid rgba(79,209,197,0.35);
-      border-radius: 999px;
-      color: var(--accent);
-      font-size: 13px;
-      margin-bottom: 18px;
-      background: rgba(79,209,197,0.08);
+      padding:8px 14px;
+      background:var(--secondary);
+      color:var(--primary);
+      border-radius:999px;
+      font-size:13px;
+      font-weight:700;
+      margin-bottom:18px;
     }
 
     h1{
-      font-size: 58px;
-      line-height: 1.05;
-      margin: 0 0 18px 0;
-      letter-spacing: -1.2px;
+      margin:0;
+      font-size:58px;
+      line-height:1.03;
+      color:var(--primary-dark);
+      letter-spacing:-1.3px;
     }
 
     .hero p{
-      font-size: 18px;
-      line-height: 1.8;
-      color: var(--muted);
-      margin: 0;
-      max-width: 760px;
+      margin:20px 0 0;
+      font-size:18px;
+      line-height:1.8;
+      color:var(--muted);
+      max-width:760px;
     }
 
-    .hero-buttons{
-      margin-top: 28px;
+    .hero-actions{
       display:flex;
       gap:14px;
       flex-wrap:wrap;
+      margin-top:28px;
     }
 
     .btn{
-      padding: 13px 20px;
-      border-radius: 12px;
-      font-weight:700;
-      font-size:15px;
-      transition: 0.25s ease;
       display:inline-block;
+      padding:14px 20px;
+      border-radius:14px;
+      font-size:15px;
+      font-weight:700;
+      transition:0.2s ease;
     }
 
     .btn-primary{
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #062033;
-      box-shadow: var(--shadow);
+      background:linear-gradient(135deg, var(--primary), #12807a);
+      color:white;
+      box-shadow:var(--shadow);
     }
 
     .btn-primary:hover{
-      transform: translateY(-2px);
+      transform:translateY(-2px);
     }
 
     .btn-secondary{
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.05);
-      color: var(--text);
+      background:white;
+      border:1px solid var(--border);
+      color:var(--primary-dark);
     }
 
     .btn-secondary:hover{
-      background: rgba(255,255,255,0.09);
+      background:#f9fcfd;
     }
 
     .hero-card{
-      background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.05));
+      background:linear-gradient(180deg, #ffffff 0%, #f3fbfa 100%);
       border:1px solid var(--border);
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: var(--shadow);
+      border-radius:28px;
+      padding:30px;
+      box-shadow:var(--shadow);
     }
 
-    .profile-circle{
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
+    .avatar{
+      width:88px;
+      height:88px;
+      border-radius:22px;
+      background:linear-gradient(135deg, var(--primary), #6fd2c8);
+      color:white;
       display:flex;
       align-items:center;
       justify-content:center;
-      font-size: 38px;
-      font-weight: 700;
-      color: #08304a;
-      margin-bottom: 22px;
+      font-size:32px;
+      font-weight:700;
+      margin-bottom:18px;
     }
 
-    .mini-title{
-      font-size: 13px;
-      letter-spacing: 1.4px;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 8px;
+    .hero-card .small{
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:1.5px;
+      color:var(--primary);
+      font-weight:700;
+      margin-bottom:8px;
     }
 
     .hero-card h3{
-      margin: 0 0 14px 0;
-      font-size: 24px;
+      margin:0 0 12px;
+      font-size:26px;
+      color:var(--primary-dark);
     }
 
     .hero-card p{
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.7;
+      margin:0;
+      font-size:15px;
+      line-height:1.7;
+      color:var(--muted);
     }
 
-    .hero-stats{
+    .info-grid{
       display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin-top: 20px;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:20px;
     }
 
-    .stat{
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 16px;
+    .info-box{
+      background:white;
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:14px;
     }
 
-    .stat strong{
+    .info-box strong{
       display:block;
-      font-size: 22px;
-      margin-bottom: 4px;
-      color: var(--white);
+      margin-bottom:5px;
+      color:var(--primary-dark);
+      font-size:16px;
     }
 
-    .stat span{
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.5;
+    .info-box span{
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.5;
     }
 
     section{
-      padding: 30px 0 10px;
+      padding:24px 0;
     }
 
-    .section-heading{
-      margin-bottom: 20px;
+    .section-head{
+      margin-bottom:20px;
     }
 
-    .section-heading .label{
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 1.6px;
-      font-size: 12px;
-      margin-bottom: 8px;
+    .section-head .tag{
+      color:var(--accent);
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:1.5px;
+      font-weight:700;
+      margin-bottom:8px;
     }
 
-    .section-heading h2{
-      font-size: 34px;
-      margin: 0 0 10px 0;
+    .section-head h2{
+      margin:0 0 10px;
+      font-size:36px;
+      color:var(--primary-dark);
     }
 
-    .section-heading p{
-      color: var(--muted);
-      line-height: 1.8;
-      max-width: 760px;
-      margin: 0;
+    .section-head p{
+      margin:0;
+      max-width:760px;
+      color:var(--muted);
+      line-height:1.8;
+      font-size:16px;
     }
 
-    .about-grid{
+    .two-col{
       display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
     }
 
     .card{
-      background: rgba(255,255,255,0.06);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 26px;
-      box-shadow: var(--shadow);
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--shadow);
     }
 
     .card h3{
-      margin-top: 0;
-      margin-bottom: 14px;
-      font-size: 22px;
+      margin-top:0;
+      margin-bottom:12px;
+      font-size:24px;
+      color:var(--primary-dark);
     }
 
     .card p{
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.8;
+      margin:0;
+      color:var(--muted);
+      line-height:1.8;
+      font-size:15px;
     }
 
-    .expertise-grid{
+    .service-grid{
       display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 16px;
+      grid-template-columns:repeat(3, 1fr);
+      gap:22px;
     }
 
-    .expertise-card{
-      background: rgba(255,255,255,0.06);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 22px;
-      transition: 0.25s ease;
+    .service-card{
+      background:white;
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:26px;
+      box-shadow:var(--shadow);
+      transition:0.2s ease;
     }
 
-    .expertise-card:hover{
-      transform: translateY(-4px);
-      background: rgba(255,255,255,0.08);
+    .service-card:hover{
+      transform:translateY(-4px);
     }
 
-    .expertise-icon{
-      width: 52px;
-      height: 52px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, rgba(79,209,197,0.22), rgba(125,211,252,0.22));
+    .icon{
+      width:58px;
+      height:58px;
+      border-radius:16px;
       display:flex;
       align-items:center;
       justify-content:center;
-      font-size: 24px;
-      margin-bottom: 16px;
+      background:linear-gradient(135deg, #e5f6f3, #fff3df);
+      font-size:26px;
+      margin-bottom:16px;
     }
 
-    .expertise-card h3{
-      margin: 0 0 10px 0;
-      font-size: 20px;
+    .service-card h3{
+      margin:0 0 10px;
+      font-size:22px;
+      color:var(--primary-dark);
     }
 
-    .expertise-card p{
+    .service-card p{
       margin:0;
-      color: var(--muted);
-      line-height: 1.75;
-      font-size: 15px;
+      color:var(--muted);
+      line-height:1.75;
+      font-size:15px;
     }
 
     .highlight-grid{
       display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
+      grid-template-columns:repeat(2, 1fr);
+      gap:22px;
     }
 
-    .highlight-card{
-      background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.04));
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 24px;
+    .highlight{
+      background:linear-gradient(180deg, #ffffff, #f8fbfc);
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:26px;
+      box-shadow:var(--shadow);
     }
 
-    .highlight-card .tag{
+    .pill{
       display:inline-block;
-      font-size: 12px;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: rgba(79,209,197,0.12);
-      color: var(--accent);
-      margin-bottom: 14px;
+      padding:7px 12px;
+      border-radius:999px;
+      background:var(--secondary);
+      color:var(--primary);
+      font-size:12px;
+      font-weight:700;
+      margin-bottom:14px;
     }
 
-    .highlight-card h3{
-      margin: 0 0 10px 0;
-      font-size: 22px;
+    .highlight h3{
+      margin:0 0 10px;
+      font-size:22px;
+      color:var(--primary-dark);
     }
 
-    .highlight-card p{
-      color: var(--muted);
-      line-height: 1.8;
-      margin-bottom: 0;
+    .highlight p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.8;
+      font-size:15px;
     }
 
-    .research-banner{
-      margin-top: 16px;
-      background: linear-gradient(135deg, rgba(79,209,197,0.14), rgba(245,199,107,0.10));
-      border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: var(--shadow);
+    .band{
+      background:linear-gradient(135deg, #0f5f5c, #0b4543);
+      color:white;
+      border-radius:30px;
+      padding:34px;
+      box-shadow:var(--shadow);
     }
 
-    .research-banner h3{
-      margin-top: 0;
-      font-size: 28px;
-      margin-bottom: 10px;
+    .band h3{
+      margin:0 0 12px;
+      font-size:30px;
     }
 
-    .research-banner p{
-      color: var(--muted);
-      line-height: 1.9;
-      margin: 0;
+    .band p{
+      margin:0;
+      line-height:1.9;
+      color:rgba(255,255,255,0.88);
+      font-size:16px;
     }
 
-    .research-points{
-      margin-top: 18px;
+    .band-grid{
       display:grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
+      grid-template-columns:repeat(2, 1fr);
+      gap:14px;
+      margin-top:22px;
     }
 
-    .point{
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 16px;
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: 14px;
+    .band-box{
+      background:rgba(255,255,255,0.10);
+      border:1px solid rgba(255,255,255,0.12);
+      border-radius:18px;
+      padding:16px;
+      line-height:1.7;
+      font-size:14px;
+      color:rgba(255,255,255,0.9);
     }
 
-    .contact-section{
-      padding-bottom: 70px;
-    }
-
-    .contact-card{
+    .credentials-grid{
       display:grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 24px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: var(--shadow);
+      grid-template-columns:1fr 1fr;
+      gap:22px;
     }
 
-    .contact-card h3{
-      margin-top:0;
-      font-size: 28px;
+    .list{
+      margin:0;
+      padding-left:18px;
+      color:var(--muted);
+      line-height:1.8;
+      font-size:15px;
     }
 
-    .contact-card p{
-      color: var(--muted);
-      line-height: 1.8;
-      margin-bottom: 0;
+    .list li{
+      margin-bottom:8px;
     }
 
-    .contact-list{
+    .contact-wrap{
       display:grid;
-      gap: 14px;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+      align-items:start;
     }
 
     .contact-item{
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 16px;
+      background:white;
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:var(--shadow);
+      margin-bottom:14px;
     }
 
     .contact-item strong{
       display:block;
-      margin-bottom: 6px;
-      color: var(--white);
+      margin-bottom:6px;
+      color:var(--primary-dark);
     }
 
-    .contact-item span, .contact-item a{
-      color: var(--muted);
-      word-break: break-word;
+    .contact-item span,
+    .contact-item a{
+      color:var(--muted);
+      word-break:break-word;
     }
 
     footer{
-      border-top: 1px solid rgba(255,255,255,0.08);
-      color: var(--muted);
-      padding: 22px 0 40px;
+      padding:30px 0 40px;
       text-align:center;
+      color:var(--muted);
       font-size:14px;
     }
 
     @media (max-width: 980px){
       .hero-grid,
-      .about-grid,
-      .expertise-grid,
+      .two-col,
+      .service-grid,
       .highlight-grid,
-      .contact-card,
-      .research-points{
-        grid-template-columns: 1fr;
+      .band-grid,
+      .credentials-grid,
+      .contact-wrap{
+        grid-template-columns:1fr;
       }
 
       h1{
-        font-size: 42px;
+        font-size:42px;
       }
 
       .menu{
@@ -466,7 +477,7 @@
       }
 
       .hero{
-        padding-top: 60px;
+        padding-top:56px;
       }
     }
   </style>
@@ -475,12 +486,13 @@
 
   <div class="nav">
     <div class="container nav-inner">
-      <div class="brand">Snehal Shirsat</div>
+      <div class="logo">Snehal Shirsat</div>
       <div class="menu">
         <a href="#about">About</a>
-        <a href="#expertise">Expertise</a>
+        <a href="#work">What I Do</a>
         <a href="#highlights">Highlights</a>
         <a href="#research">Research</a>
+        <a href="#credentials">Credentials</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -490,45 +502,43 @@
     <section class="hero">
       <div class="hero-grid">
         <div>
-          <div class="eyebrow">Renewable Energy • Project Leadership • Strategy</div>
-          <h1>
-            Building cleaner energy projects with structure, strategy, and execution.
-          </h1>
+          <div class="eyebrow">Renewable Energy Leadership • Strategy • Infrastructure</div>
+          <h1>Helping large energy projects move forward with clarity, coordination, and strategic thinking.</h1>
           <p>
-            I’m Snehal Shirsat — a renewable energy project professional focused on utility-scale infrastructure, stakeholder coordination, project delivery, and decision-making frameworks that improve how projects move from concept to execution.
+            I’m Snehal Shirsat, a project leader working across renewable energy, capital infrastructure, and feasibility-focused decision making. My work combines execution discipline, cross-functional coordination, and a strong interest in how better project strategy can improve outcomes in utility-scale development.
           </p>
 
-          <div class="hero-buttons">
-            <a class="btn btn-primary" href="#contact">Let’s Connect</a>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Connect With Me</a>
             <a class="btn btn-secondary" href="https://www.linkedin.com/in/snehalshirsat/" target="_blank">LinkedIn</a>
             <a class="btn btn-secondary" href="#">Resume PDF</a>
           </div>
         </div>
 
         <div class="hero-card">
-          <div class="profile-circle">SS</div>
-          <div class="mini-title">Professional Snapshot</div>
-          <h3>Manager / Associate Director Track</h3>
+          <div class="avatar">SS</div>
+          <div class="small">Professional Focus</div>
+          <h3>Renewable project leadership with a strategic lens</h3>
           <p>
-            Bringing together renewable project execution experience, infrastructure coordination, commercial awareness, and doctoral research in feasibility decision models for utility-scale solar, wind, and BESS projects.
+            My background spans complex infrastructure delivery, utility-scale renewable projects, commercial coordination, and doctoral research in project feasibility modeling for better investment and development decisions.
           </p>
 
-          <div class="hero-stats">
-            <div class="stat">
-              <strong>10+ yrs</strong>
-              <span>Capital project and infrastructure experience</span>
+          <div class="info-grid">
+            <div class="info-box">
+              <strong>10+ Years</strong>
+              <span>Capital projects and infrastructure experience</span>
             </div>
-            <div class="stat">
-              <strong>Utility-Scale</strong>
-              <span>Solar, wind, and battery storage focus</span>
+            <div class="info-box">
+              <strong>$500M+</strong>
+              <span>Exposure to large-scale renewable and infrastructure programs</span>
             </div>
-            <div class="stat">
-              <strong>PhD</strong>
-              <span>Research in feasibility decision modeling</span>
+            <div class="info-box">
+              <strong>Solar • Wind • BESS</strong>
+              <span>Utility-scale renewable project context</span>
             </div>
-            <div class="stat">
-              <strong>Chicago</strong>
-              <span>Targeting leadership roles in renewable energy</span>
+            <div class="info-box">
+              <strong>PhD Research</strong>
+              <span>Feasibility and decision modeling focus</span>
             </div>
           </div>
         </div>
@@ -536,153 +546,186 @@
     </section>
 
     <section id="about">
-      <div class="section-heading">
-        <div class="label">About</div>
-        <h2>A website, not a resume.</h2>
+      <div class="section-head">
+        <div class="tag">About</div>
+        <h2>A modern professional website</h2>
         <p>
-          This space is designed to present who I am professionally, what I care about, and the kind of impact I aim to create in renewable energy. It is intentionally visual, modern, and strategic — not a copy of a resume.
+          This site is designed to introduce who I am and how I think about renewable energy work — not to repeat a traditional resume. It presents my experience in a more visual, thoughtful, and brand-driven way.
         </p>
       </div>
 
-      <div class="about-grid">
+      <div class="two-col">
         <div class="card">
           <h3>Who I Am</h3>
           <p>
-            I work at the intersection of project execution, stakeholder alignment, and renewable infrastructure strategy. My background includes large capital projects, coordination across engineering and commercial teams, and growing specialization in utility-scale renewable energy environments.
+            I bring experience across project delivery, stakeholder coordination, contractor management, cost and schedule visibility, and large capital infrastructure environments. More recently, my work has expanded into utility-scale renewable energy and project feasibility strategy.
           </p>
         </div>
 
         <div class="card">
-          <h3>What Drives Me</h3>
+          <h3>What I Care About</h3>
           <p>
-            I’m especially interested in how better structure, better analysis, and better decision frameworks can improve renewable project outcomes. That includes everything from execution discipline to feasibility screening and strategic development decisions.
+            I’m especially interested in how structured coordination, commercial awareness, and data-driven decision frameworks can improve renewable project outcomes from development through execution.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="expertise">
-      <div class="section-heading">
-        <div class="label">Expertise</div>
-        <h2>Areas I work across</h2>
+    <section id="work">
+      <div class="section-head">
+        <div class="tag">What I Do</div>
+        <h2>The areas where I create value</h2>
         <p>
-          My experience spans project delivery, renewable infrastructure, and research-backed strategic thinking — which is what makes this profile stronger than a standard project management site.
+          Rather than listing job descriptions, this section highlights the professional capabilities I bring across teams, projects, and organizations.
         </p>
       </div>
 
-      <div class="expertise-grid">
-        <div class="expertise-card">
-          <div class="expertise-icon">⚡</div>
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="icon">⚡</div>
           <h3>Renewable Project Delivery</h3>
           <p>
-            Supporting project execution across utility-scale energy environments through coordination, issue tracking, reporting, and schedule-awareness.
+            Supporting utility-scale project execution through cross-functional coordination, documentation control, milestone visibility, and execution follow-through.
           </p>
         </div>
 
-        <div class="expertise-card">
-          <div class="expertise-icon">📊</div>
-          <h3>Strategic Decision Support</h3>
+        <div class="service-card">
+          <div class="icon">📈</div>
+          <h3>Commercial & Project Awareness</h3>
           <p>
-            Translating complex project information into structured updates, decision-ready insights, and visibility for leadership and stakeholders.
+            Working around change orders, CAPEX considerations, contractor obligations, and schedule impacts that shape large project decisions.
           </p>
         </div>
 
-        <div class="expertise-card">
-          <div class="expertise-icon">🔋</div>
-          <h3>Feasibility & Infrastructure Thinking</h3>
+        <div class="service-card">
+          <div class="icon">🤝</div>
+          <h3>Leadership Coordination</h3>
           <p>
-            Combining industry experience with research into renewable energy feasibility, screening, and portfolio decision frameworks.
+            Connecting engineering, procurement, finance, legal, operations, and project stakeholders so complex initiatives stay aligned and visible.
           </p>
         </div>
       </div>
     </section>
 
     <section id="highlights">
-      <div class="section-heading">
-        <div class="label">Highlights</div>
-        <h2>Selected professional themes</h2>
+      <div class="section-head">
+        <div class="tag">Highlights</div>
+        <h2>Selected career themes</h2>
         <p>
-          Instead of listing every role like a resume, this section highlights the type of work and value I bring across projects and teams.
+          These highlight the type of contribution I’ve made across my work, without turning the page into a traditional resume timeline.
         </p>
       </div>
 
       <div class="highlight-grid">
-        <div class="highlight-card">
-          <div class="tag">Cross-Functional Leadership</div>
-          <h3>Coordinating execution across teams</h3>
+        <div class="highlight">
+          <div class="pill">Acciona Energy</div>
+          <h3>Utility-scale renewable coordination</h3>
           <p>
-            Experience working across engineering, procurement, construction, commercial, and leadership stakeholders to keep projects aligned, visible, and moving forward.
+            Supported delivery of renewable energy projects in an IPP environment by coordinating across business development, procurement, finance, engineering, legal, O&amp;M, EPC contractors, and suppliers.
           </p>
         </div>
 
-        <div class="highlight-card">
-          <div class="tag">Commercial Awareness</div>
-          <h3>Understanding cost, schedule, and change</h3>
+        <div class="highlight">
+          <div class="pill">Infrastructure Delivery</div>
+          <h3>Large capital project execution</h3>
           <p>
-            Comfortable operating around scope changes, project impacts, reporting needs, and decision points that influence how infrastructure projects are delivered.
+            Managed and supported projects ranging from smaller capital improvements to major infrastructure developments, including contractor coordination, cost visibility, and schedule tracking.
           </p>
         </div>
 
-        <div class="highlight-card">
-          <div class="tag">Infrastructure Delivery</div>
-          <h3>Bringing discipline to complex projects</h3>
+        <div class="highlight">
+          <div class="pill">Project Controls</div>
+          <h3>Structure, reporting, and visibility</h3>
           <p>
-            Grounded in large-scale capital project environments where structure, documentation, stakeholder clarity, and execution follow-through matter.
+            Built and maintained reporting, documentation, and governance practices that improved transparency into progress, risk, performance, and project decision points.
           </p>
         </div>
 
-        <div class="highlight-card">
-          <div class="tag">Leadership Positioning</div>
-          <h3>Growing toward Manager / AD roles</h3>
+        <div class="highlight">
+          <div class="pill">Leadership Growth</div>
+          <h3>Manager / Associate Director trajectory</h3>
           <p>
-            Building a profile that blends project delivery capability with strategic thinking, research depth, and leadership potential for the next level of responsibility.
+            My profile is intentionally moving beyond execution support into higher-value leadership, strategy, and decision support roles within renewable energy organizations.
           </p>
         </div>
       </div>
     </section>
 
     <section id="research">
-      <div class="section-heading">
-        <div class="label">Research</div>
-        <h2>PhD work with practical industry relevance</h2>
+      <div class="section-head">
+        <div class="tag">Research & Vision</div>
+        <h2>Bringing research into real-world renewable decisions</h2>
         <p>
-          My doctoral research is focused on making renewable project feasibility assessment more realistic, more data-driven, and more aligned with actual Independent Power Producer decision-making.
+          My doctoral work strengthens this website beyond a professional profile — it shows how I think about the future of project feasibility, investment screening, and more intelligent development frameworks.
         </p>
       </div>
 
-      <div class="research-banner">
+      <div class="band">
         <h3>Hybrid Feasibility Decision Model (HFDM)</h3>
         <p>
-          The goal of this work is to bridge the gap between academic feasibility methods and real-world renewable development practice by integrating practical metrics such as CAPEX, OPEX, interconnection, queue position, and financial screening criteria into a stronger decision framework.
+          My PhD research focuses on improving renewable energy project feasibility assessment by integrating practical variables such as CAPEX, OPEX, interconnection, queue position, and financial decision metrics into a more realistic decision model. The goal is to better align academic methods with actual Independent Power Producer development practice.
         </p>
 
-        <div class="research-points">
-          <div class="point">Designed to support better go / no-go renewable project decisions.</div>
-          <div class="point">Focused on utility-scale solar, wind, and battery storage environments.</div>
-          <div class="point">Combines analytical rigor with practical development realities.</div>
-          <div class="point">Strengthens my profile beyond standard project management credentials.</div>
+        <div class="band-grid">
+          <div class="band-box">Focused on utility-scale solar, wind, and battery storage project environments.</div>
+          <div class="band-box">Bridges academic analysis with real development and screening realities.</div>
+          <div class="band-box">Supports better go / no-go project decisions.</div>
+          <div class="band-box">Adds strategic depth beyond standard project management experience.</div>
         </div>
       </div>
     </section>
 
-    <section class="contact-section" id="contact">
-      <div class="section-heading">
-        <div class="label">Contact</div>
-        <h2>Let’s connect</h2>
+    <section id="credentials">
+      <div class="section-head">
+        <div class="tag">Credentials</div>
+        <h2>Education, tools, and professional foundation</h2>
         <p>
-          Whether it’s a role, a collaboration, or a conversation about renewable energy, project leadership, or feasibility strategy, I’d be glad to connect.
+          These elements support the broader story behind the site: practical infrastructure experience combined with formal research, technical tools, and professional development.
         </p>
       </div>
 
-      <div class="contact-card">
-        <div>
-          <h3>Professional contact</h3>
+      <div class="credentials-grid">
+        <div class="card">
+          <h3>Education</h3>
+          <ul class="list">
+            <li>Ph.D. in Information Systems and Engineering Management — Harrisburg University</li>
+            <li>Master of Science in Techpreneurship — Harrisburg University</li>
+            <li>Master of Engineering in Construction Engineering and Management — Stevens Institute of Technology</li>
+            <li>Bachelor in Civil Engineering — University of Pune</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Tools & Certifications</h3>
+          <ul class="list">
+            <li>Primavera P6, Microsoft Project, Procore, Bluebeam, AutoCAD, Power BI, Python, Tableau, Advanced Excel</li>
+            <li>PMP — In Progress</li>
+            <li>CMIT</li>
+            <li>OSHA 30 / OSHA 10</li>
+            <li>Professional affiliations including PMI, CMAA, ASCE, AACE, and CESA</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-head">
+        <div class="tag">Contact</div>
+        <h2>Let’s connect</h2>
+        <p>
+          Whether it is a leadership opportunity, industry conversation, or collaboration around renewable energy strategy, I’d be glad to connect.
+        </p>
+      </div>
+
+      <div class="contact-wrap">
+        <div class="card">
+          <h3>Professional profile</h3>
           <p>
-            This website is meant to reflect a modern professional identity — clean, thoughtful, and aligned with the direction I’m building in renewable energy leadership.
+            This website is meant to reflect a cleaner, more modern, and more strategic professional identity — one that fits where I’m headed, not just where I’ve been.
           </p>
         </div>
 
-        <div class="contact-list">
+        <div>
           <div class="contact-item">
             <strong>Email</strong>
             <a href="mailto:shirsatssnehal@gmail.com">shirsatssnehal@gmail.com</a>
