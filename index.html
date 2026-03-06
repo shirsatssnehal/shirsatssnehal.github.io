@@ -3,144 +3,233 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Snehal Shirsat | Portfolio Resume</title>
+  <title>Snehal Shirsat | Renewable Energy Project Portfolio</title>
   <style>
+    :root{
+      --bg: #eef3f6;
+      --paper: #ffffff;
+      --text: #1f2937;
+      --muted: #5f6b7a;
+      --line: #d9e2e8;
+      --primary: #0f5c5c;
+      --primary-dark: #0a4747;
+      --accent: #1f8a8a;
+      --accent-soft: #dff3f1;
+      --sidebar-text: #edf9f8;
+      --highlight: #d3efec;
+      --shadow: 0 12px 35px rgba(0,0,0,0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #eef2f5;
-      color: #1f2937;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #eef3f6 0%, #dde7ec 100%);
+      color: var(--text);
     }
 
     .page {
-      max-width: 1100px;
+      max-width: 1250px;
       margin: 30px auto;
-      background: white;
-      display: flex;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 2.1fr 1fr;
       min-height: 100vh;
+      border-radius: 16px;
+      overflow: hidden;
     }
 
     .left {
-      width: 68%;
-      padding: 40px;
-      box-sizing: border-box;
+      padding: 42px 46px;
     }
 
     .right {
-      width: 32%;
-      background: #0f5f5c;
-      color: white;
-      padding: 35px 28px;
-      box-sizing: border-box;
+      background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: var(--sidebar-text);
+      padding: 38px 30px;
     }
 
-    h1 {
+    .name {
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
       margin: 0;
-      font-size: 34px;
-      color: #111827;
+      color: #12202c;
     }
 
-    .title {
-      margin-top: 8px;
+    .headline {
+      margin-top: 10px;
       font-size: 18px;
-      color: #0f766e;
-      font-weight: bold;
+      color: var(--accent);
+      font-weight: 700;
+      line-height: 1.5;
     }
 
     .contact-line {
-      margin-top: 14px;
+      margin-top: 16px;
+      color: var(--muted);
       font-size: 14px;
-      color: #6b7280;
+      line-height: 1.8;
+    }
+
+    .contact-line a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .contact-line a:hover {
+      color: var(--accent);
+    }
+
+    .top-buttons {
+      margin-top: 22px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-secondary {
+      background: var(--accent-soft);
+      color: var(--primary-dark);
+    }
+
+    .btn-secondary:hover {
+      background: #c7ebe7;
     }
 
     .section {
-      margin-top: 30px;
+      margin-top: 34px;
     }
 
     .section h2 {
-      font-size: 16px;
-      color: #111827;
-      border-bottom: 2px solid #dbe3ea;
-      padding-bottom: 8px;
-      margin-bottom: 15px;
+      font-size: 15px;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 1.2px;
+      margin: 0 0 18px 0;
+      color: #12202c;
+      border-bottom: 2px solid var(--line);
+      padding-bottom: 10px;
     }
 
     .summary {
-      line-height: 1.7;
-      color: #374151;
       font-size: 15px;
+      line-height: 1.8;
+      color: #334155;
     }
 
     .job {
-      margin-bottom: 25px;
+      margin-bottom: 26px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid #edf1f4;
+    }
+
+    .job:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
     }
 
     .job-title {
-      font-weight: bold;
-      font-size: 16px;
-      color: #111827;
+      font-size: 17px;
+      font-weight: 700;
+      color: #162633;
     }
 
     .job-company {
-      color: #0f766e;
-      font-weight: bold;
       margin-top: 3px;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--accent);
     }
 
     .job-date {
-      color: #6b7280;
+      margin-top: 5px;
       font-size: 13px;
-      margin-top: 3px;
-      margin-bottom: 10px;
+      color: var(--muted);
     }
 
     ul {
-      margin: 0;
+      margin: 12px 0 0 0;
       padding-left: 20px;
     }
 
     li {
       margin-bottom: 8px;
-      line-height: 1.6;
-      color: #374151;
+      line-height: 1.7;
+      color: #334155;
       font-size: 15px;
     }
 
-    .edu-item {
-      margin-bottom: 16px;
-      line-height: 1.6;
-      color: #374151;
+    .edu-item, .recognition-item {
+      margin-bottom: 18px;
+      line-height: 1.7;
+      color: #334155;
+      font-size: 15px;
     }
 
-    .skills {
-      line-height: 1.8;
-      color: #374151;
-      font-size: 15px;
+    .edu-item strong,
+    .recognition-item strong {
+      color: #162633;
+    }
+
+    .skills-block {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill-tag {
+      background: var(--accent-soft);
+      color: var(--primary-dark);
+      padding: 9px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
     }
 
     .sidebar-section {
-      margin-bottom: 32px;
+      margin-bottom: 30px;
     }
 
     .sidebar-section h3 {
-      margin: 0 0 12px 0;
-      font-size: 15px;
+      margin: 0 0 14px 0;
+      font-size: 14px;
       text-transform: uppercase;
-      letter-spacing: 0.8px;
-      border-bottom: 1px solid rgba(255,255,255,0.35);
+      letter-spacing: 1px;
+      border-bottom: 1px solid rgba(255,255,255,0.25);
       padding-bottom: 8px;
+      color: white;
     }
 
-    .sidebar-section p,
-    .sidebar-section li,
-    .sidebar-section a {
-      color: #eaf4f4;
+    .sidebar-box {
+      background: rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+      line-height: 1.6;
       font-size: 14px;
-      line-height: 1.7;
-      text-decoration: none;
     }
 
     .sidebar-list {
@@ -150,25 +239,48 @@
     }
 
     .sidebar-list li {
+      color: var(--sidebar-text);
+      font-size: 14px;
       margin-bottom: 10px;
-      color: #eaf4f4;
+      line-height: 1.6;
+      padding-left: 0;
     }
 
-    .highlight-box {
-      background: rgba(255,255,255,0.08);
-      padding: 12px 14px;
-      border-radius: 8px;
-      margin-bottom: 10px;
+    .right a {
+      color: #ffffff;
+      text-decoration: none;
     }
 
-    @media (max-width: 900px) {
+    .right a:hover {
+      text-decoration: underline;
+    }
+
+    .small-note {
+      font-size: 13px;
+      color: rgba(255,255,255,0.86);
+      line-height: 1.7;
+    }
+
+    .footer-note {
+      margin-top: 35px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.70);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 980px) {
       .page {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         margin: 0;
+        border-radius: 0;
       }
 
       .left, .right {
-        width: 100%;
+        padding: 28px 24px;
+      }
+
+      .name {
+        font-size: 32px;
       }
     }
   </style>
@@ -178,72 +290,137 @@
   <div class="page">
 
     <div class="left">
-      <h1>Snehal Shirsat</h1>
-      <div class="title">Renewable Energy Project Management | Strategic Planning | Team Leadership</div>
+      <h1 class="name">Snehal S Shirsat</h1>
+
+      <div class="headline">
+        Project Manager | Renewable Energy Infrastructure | Utility-Scale Solar, Wind & BESS | Project Delivery | Commercial Risk | Feasibility Modeling
+      </div>
+
       <div class="contact-line">
-        Chicago, IL | your.email@example.com | linkedin.com/in/snehalshirsat
+        Chicago, IL |
+        Mobile: 718-696-7739 |
+        <a href="mailto:shirsatssnehal@gmail.com">shirsatssnehal@gmail.com</a> |
+        <a href="https://www.linkedin.com/in/snehalshirsat/" target="_blank">LinkedIn Profile</a>
+      </div>
+
+      <div class="top-buttons">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/snehalshirsat/" target="_blank">View LinkedIn</a>
+        <a class="btn btn-secondary" href="mailto:shirsatssnehal@gmail.com">Email Me</a>
+        <a class="btn btn-secondary" href="#">Resume PDF</a>
       </div>
 
       <div class="section">
         <h2>Professional Summary</h2>
         <div class="summary">
-          Renewable energy infrastructure professional with experience supporting project coordination,
-          stakeholder management, commercial evaluation, and executive reporting across utility-scale
-          project environments. Currently pursuing doctoral research focused on renewable project
-          feasibility decision-making and strategic infrastructure evaluation.
+          Project Manager with over 10+ years of experience delivering complex capital infrastructure projects across construction and renewable energy sectors, including utility-scale wind, solar, and BESS developments exceeding $500M in value within Independent Power Producer environments. Experienced in coordinating EPC contractors, suppliers, and cross-functional teams to manage construction execution, cost and schedule performance, project governance, and commercial risk. Also engaged in PhD research focused on renewable project feasibility and decision modeling for more data-driven project development.
         </div>
       </div>
 
       <div class="section">
-        <h2>Experience</h2>
+        <h2>Professional Experience</h2>
 
         <div class="job">
-          <div class="job-title">Project Manager / Project Professional</div>
-          <div class="job-company">Company Name</div>
-          <div class="job-date">Year – Year | City, State</div>
+          <div class="job-title">Project Manager</div>
+          <div class="job-company">Acciona Energy USA Global LLC</div>
+          <div class="job-date">Chicago, IL | June 2024 – Present</div>
           <ul>
-            <li>Led coordination across engineering, EPC, commercial, and project stakeholders to support execution priorities.</li>
-            <li>Reviewed change orders and assessed cost and schedule implications for leadership visibility.</li>
-            <li>Prepared structured reports and project summaries highlighting risks, progress, and key decisions.</li>
-            <li>Facilitated meetings and follow-up actions to improve cross-functional alignment and project transparency.</li>
+            <li>Led cross-functional collaboration across Business Development, Procurement, Finance, Accounting, Engineering, Legal, and O&amp;M to support utility-scale renewable project delivery in an IPP environment.</li>
+            <li>Managed coordination with EPC contractors and equipment suppliers to support contract compliance, milestone tracking, and execution of engineering, procurement, and construction deliverables.</li>
+            <li>Developed governance frameworks and maintained project documentation for renewable infrastructure projects exceeding $200M in capital value.</li>
+            <li>Established cost and schedule baselines for $100M+ CAPEX renewable infrastructure programs to support performance monitoring and delivery alignment.</li>
+            <li>Evaluated change orders, contract amendments, force majeure events, and schedule impacts affecting renewable energy project contracts.</li>
+            <li>Analyzed technical interfaces for battery energy storage systems including battery packages, PCS, and main power transformer coordination.</li>
+            <li>Monitored counterparty compliance with renewable energy contract obligations by tracking deliverables, documentation, and performance commitments.</li>
           </ul>
         </div>
 
         <div class="job">
-          <div class="job-title">Project Engineer / Analyst / Coordinator</div>
-          <div class="job-company">Company Name</div>
-          <div class="job-date">Year – Year | City, State</div>
+          <div class="job-title">Project Manager</div>
+          <div class="job-company">SAGE Builders Corp</div>
+          <div class="job-date">New York, NY | Sept 2019 – June 2024</div>
           <ul>
-            <li>Supported planning, coordination, issue tracking, and project documentation management.</li>
-            <li>Worked with project teams to improve execution visibility and stakeholder communication.</li>
-            <li>Contributed to organized reporting and follow-up processes across multiple project activities.</li>
+            <li>Managed capital improvement construction projects across the full lifecycle ranging from $250K to complex infrastructure developments exceeding $50M.</li>
+            <li>Directed construction execution by coordinating superintendents, subcontractors, and site teams to maintain alignment with schedules, resources, and field operations.</li>
+            <li>Managed contractor performance across 42 subcontractors, reviewed and approved more than $25M in project payments, and closed 16 construction contract agreements.</li>
+            <li>Contributed to successful delivery of a major infrastructure project two months ahead of schedule, improving turnover timing and project profitability.</li>
+            <li>Prepared cost estimates and bid proposals identifying material quantities, equipment, and labor requirements, achieving cost efficiencies up to 15%.</li>
+            <li>Developed project control dashboards and progress reporting tools to track cost variance, construction risks, and progress across concurrent initiatives.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-title">Associate Project Manager</div>
+          <div class="job-company">King Rose Construction</div>
+          <div class="job-date">New York, NY | May 2018 – Sept 2019</div>
+          <ul>
+            <li>Supported engineering and project management teams on a $20M Columbia University construction project to maintain cost and delivery targets.</li>
+            <li>Developed schedules, risk assessments, and resource planning documentation using Primavera P6, supporting schedule monitoring and value engineering efforts.</li>
+            <li>Maintained RFIs, submittals, change order logs, and project records to support communication across project stakeholders.</li>
+            <li>Updated the project Lessons Learned database to support knowledge transfer and implementation improvements across future construction initiatives.</li>
           </ul>
         </div>
       </div>
 
       <div class="section">
         <h2>Education</h2>
+
         <div class="edu-item">
-          <strong>PhD (In Progress)</strong><br>
-          University Name<br>
-          Research focus: Renewable project feasibility decision modeling
+          <strong>Ph.D. in Information Systems and Engineering Management</strong><br>
+          Harrisburg University of Science and Technology, Harrisburg, PA<br>
+          Anticipated Dec 2027<br>
+          Focus: Renewable energy feasibility modeling and data-driven project development for investment decisions
         </div>
+
         <div class="edu-item">
-          <strong>Master’s Degree</strong><br>
-          University Name
+          <strong>Master of Science in Techpreneurship</strong><br>
+          Harrisburg University of Science and Technology<br>
+          Dec 2023
         </div>
+
         <div class="edu-item">
-          <strong>Bachelor’s Degree</strong><br>
-          University Name
+          <strong>Master of Engineering in Construction Engineering and Management</strong><br>
+          Stevens Institute of Technology<br>
+          Dec 2018
+        </div>
+
+        <div class="edu-item">
+          <strong>Bachelor in Civil Engineering</strong><br>
+          University of Pune<br>
+          May 2016
         </div>
       </div>
 
       <div class="section">
-        <h2>Skills</h2>
-        <div class="skills">
-          Project Management • Strategic Planning • Stakeholder Coordination • Executive Reporting •
-          Risk Visibility • Change Order Evaluation • Renewable Energy • Infrastructure Delivery •
-          Cross-Functional Leadership
+        <h2>Technical Skills & Tools</h2>
+        <div class="skills-block">
+          <div class="skill-tag">Capital Project Delivery</div>
+          <div class="skill-tag">Commercial & Contract Management</div>
+          <div class="skill-tag">Stakeholder Coordination</div>
+          <div class="skill-tag">Project Risk Assessment</div>
+          <div class="skill-tag">Utility & Grid Coordination</div>
+          <div class="skill-tag">Primavera P6</div>
+          <div class="skill-tag">Microsoft Project</div>
+          <div class="skill-tag">Procore</div>
+          <div class="skill-tag">Bluebeam</div>
+          <div class="skill-tag">AutoCAD</div>
+          <div class="skill-tag">Power BI</div>
+          <div class="skill-tag">Python</div>
+          <div class="skill-tag">Tableau</div>
+          <div class="skill-tag">Advanced Excel</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Recognitions</h2>
+
+        <div class="recognition-item">
+          <strong>Performance Recognition – Acciona Energy USA Global (2024)</strong><br>
+          Earned early performance recognition within six months of joining, reflecting strong project delivery contributions and leadership across cross-functional teams.
+        </div>
+
+        <div class="recognition-item">
+          <strong>Special Contribution Award – Columbia University Project (2018)</strong><br>
+          Commended by project leadership for effectively managing multiple workstreams, coordinating engineers, subcontractors, and site teams to maintain progress and milestones.
         </div>
       </div>
     </div>
@@ -252,47 +429,66 @@
 
       <div class="sidebar-section">
         <h3>Core Strengths</h3>
-        <div class="highlight-box">Strategic Problem-Solving</div>
-        <div class="highlight-box">Executive Communication</div>
-        <div class="highlight-box">Cross-Functional Leadership</div>
-        <div class="highlight-box">Stakeholder Alignment</div>
+        <div class="sidebar-box">Utility-Scale Renewable Project Coordination</div>
+        <div class="sidebar-box">Cross-Functional Leadership</div>
+        <div class="sidebar-box">Change Order & CAPEX Impact Evaluation</div>
+        <div class="sidebar-box">Executive Reporting & Governance</div>
+        <div class="sidebar-box">Commercial Risk Awareness</div>
       </div>
 
       <div class="sidebar-section">
-        <h3>Key Achievements</h3>
+        <h3>Target Positioning</h3>
         <ul class="sidebar-list">
-          <li>Supported project delivery through structured coordination and follow-up.</li>
-          <li>Improved visibility into scope, schedule, and project decision points.</li>
-          <li>Contributed to leadership-ready reporting and stakeholder alignment.</li>
+          <li>Manager – Renewable Energy Projects</li>
+          <li>Manager – Infrastructure Delivery</li>
+          <li>Manager – Project Strategy / Execution</li>
+          <li>Associate Director – Renewable Infrastructure</li>
         </ul>
-      </div>
-
-      <div class="sidebar-section">
-        <h3>Focus Areas</h3>
-        <ul class="sidebar-list">
-          <li>Utility-Scale Renewable Energy</li>
-          <li>Infrastructure Delivery</li>
-          <li>Project Strategy</li>
-          <li>Feasibility Evaluation</li>
-          <li>Decision Support</li>
-        </ul>
-      </div>
-
-      <div class="sidebar-section">
-        <h3>Contact</h3>
-        <p>Chicago, Illinois</p>
-        <p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p><a href="https://www.linkedin.com/in/snehalshirsat/" target="_blank">linkedin.com/in/snehalshirsat</a></p>
-        <p><a href="https://snehalshirsat.github.io" target="_blank">snehalshirsat.github.io</a></p>
       </div>
 
       <div class="sidebar-section">
         <h3>Certifications</h3>
-        <p>Add certifications here</p>
+        <ul class="sidebar-list">
+          <li>PMP – In Progress (Expected April 2026)</li>
+          <li>Construction Manager in Training (CMIT)</li>
+          <li>OSHA 30 – Construction Safety</li>
+          <li>OSHA 10 – Construction Safety</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Professional Affiliations</h3>
+        <ul class="sidebar-list">
+          <li>Project Management Institute (PMI)</li>
+          <li>Construction Management Association of America (CMAA)</li>
+          <li>American Society of Civil Engineers (ASCE)</li>
+          <li>American Association of Cost Engineers (AACE)</li>
+          <li>Construction Engineering Society of America (CESA)</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Research Focus</h3>
+        <div class="small-note">
+          PhD researcher focused on renewable energy project feasibility and decision modeling for more data-driven project development. Strong interest in solar, wind, and BESS screening decisions within IPP environments.
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Contact</h3>
+        <div class="small-note">
+          Chicago, IL<br>
+          <a href="mailto:shirsatssnehal@gmail.com">shirsatssnehal@gmail.com</a><br>
+          <a href="https://www.linkedin.com/in/snehalshirsat/" target="_blank">linkedin.com/in/snehalshirsat</a><br>
+          <a href="https://shirsatssnehal.github.io" target="_blank">shirsatssnehal.github.io</a>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        You can edit any section later directly in GitHub by opening <strong>index.html</strong> and updating the text.
       </div>
 
     </div>
-
   </div>
 
 </body>
