@@ -6,18 +6,27 @@
   <title>Snehal Shirsat | Renewable Energy Project Leadership</title>
   <style>
     :root{
-      --bg:#f6f8fb;
-      --text:#173042;
-      --muted:#5f7485;
-      --primary:#0e5a57;
-      --primary-dark:#083c3a;
-      --secondary:#dff5f2;
-      --accent:#f4b860;
+      --bg:#fcfaff;
+      --bg-soft:#f6f1ff;
+      --bg-soft-2:#fff6f2;
+      --text:#2f2440;
+      --muted:#6f6482;
+
+      --primary:#6f4bd8;
+      --primary-dark:#4d2ea8;
+      --primary-soft:#efe8ff;
+
+      --secondary:#f8d9b6;
+      --secondary-soft:#fff1e6;
+
+      --mint:#dff8f1;
+      --pink:#ffe3ef;
       --white:#ffffff;
-      --card:#ffffff;
-      --border:#dce8ee;
-      --shadow:0 18px 45px rgba(16,41,56,0.10);
-      --radius:22px;
+
+      --card:#ffffffcc;
+      --border:#eadffd;
+      --shadow:0 18px 45px rgba(101, 72, 170, 0.14);
+      --radius:24px;
       --max:1180px;
     }
 
@@ -31,9 +40,10 @@
       font-family: Arial, sans-serif;
       color:var(--text);
       background:
-        radial-gradient(circle at top left, rgba(14,90,87,0.08), transparent 24%),
-        radial-gradient(circle at top right, rgba(244,184,96,0.12), transparent 22%),
-        linear-gradient(180deg, #f8fbfc 0%, #eef4f7 100%);
+        radial-gradient(circle at top left, rgba(111,75,216,0.14), transparent 24%),
+        radial-gradient(circle at top right, rgba(248,217,182,0.26), transparent 22%),
+        radial-gradient(circle at 20% 80%, rgba(255,227,239,0.45), transparent 20%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 55%, #fffdfd 100%);
     }
 
     a{
@@ -50,9 +60,9 @@
       position:sticky;
       top:0;
       z-index:100;
-      background:rgba(246,248,251,0.92);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid rgba(23,48,66,0.06);
+      background:rgba(252,250,255,0.82);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(111,75,216,0.10);
     }
 
     .nav-inner{
@@ -95,12 +105,13 @@
     .eyebrow{
       display:inline-block;
       padding:8px 14px;
-      background:var(--secondary);
+      background:linear-gradient(135deg, var(--primary-soft), #f7f0ff);
       color:var(--primary);
       border-radius:999px;
       font-size:13px;
       font-weight:700;
       margin-bottom:18px;
+      border:1px solid #e7dcff;
     }
 
     h1{
@@ -136,7 +147,7 @@
     }
 
     .btn-primary{
-      background:linear-gradient(135deg, var(--primary), #12807a);
+      background:linear-gradient(135deg, var(--primary), #9a74ff);
       color:white;
       box-shadow:var(--shadow);
     }
@@ -146,17 +157,17 @@
     }
 
     .btn-secondary{
-      background:white;
+      background:rgba(255,255,255,0.75);
       border:1px solid var(--border);
       color:var(--primary-dark);
     }
 
     .btn-secondary:hover{
-      background:#f9fcfd;
+      background:#ffffff;
     }
 
     .hero-card{
-      background:linear-gradient(180deg, #ffffff 0%, #f3fbfa 100%);
+      background:linear-gradient(180deg, rgba(255,255,255,0.88) 0%, rgba(246,241,255,0.85) 100%);
       border:1px solid var(--border);
       border-radius:28px;
       padding:30px;
@@ -167,7 +178,7 @@
       width:88px;
       height:88px;
       border-radius:22px;
-      background:linear-gradient(135deg, var(--primary), #6fd2c8);
+      background:linear-gradient(135deg, var(--primary), #ffb8d1);
       color:white;
       display:flex;
       align-items:center;
@@ -207,7 +218,7 @@
     }
 
     .info-box{
-      background:white;
+      background:rgba(255,255,255,0.82);
       border:1px solid var(--border);
       border-radius:16px;
       padding:14px;
@@ -235,7 +246,7 @@
     }
 
     .section-head .tag{
-      color:var(--accent);
+      color:#c07a1d;
       font-size:12px;
       text-transform:uppercase;
       letter-spacing:1.5px;
@@ -264,11 +275,12 @@
     }
 
     .card{
-      background:var(--card);
+      background:rgba(255,255,255,0.76);
       border:1px solid var(--border);
       border-radius:var(--radius);
       padding:28px;
       box-shadow:var(--shadow);
+      backdrop-filter: blur(8px);
     }
 
     .card h3{
@@ -292,7 +304,7 @@
     }
 
     .service-card{
-      background:white;
+      background:linear-gradient(180deg, rgba(255,255,255,0.88), rgba(255,247,252,0.82));
       border:1px solid var(--border);
       border-radius:24px;
       padding:26px;
@@ -311,7 +323,7 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      background:linear-gradient(135deg, #e5f6f3, #fff3df);
+      background:linear-gradient(135deg, #efe6ff, #ffe8f0);
       font-size:26px;
       margin-bottom:16px;
     }
@@ -336,7 +348,7 @@
     }
 
     .highlight{
-      background:linear-gradient(180deg, #ffffff, #f8fbfc);
+      background:linear-gradient(180deg, rgba(255,255,255,0.94), rgba(255,241,230,0.55));
       border:1px solid var(--border);
       border-radius:24px;
       padding:26px;
@@ -347,8 +359,8 @@
       display:inline-block;
       padding:7px 12px;
       border-radius:999px;
-      background:var(--secondary);
-      color:var(--primary);
+      background:linear-gradient(135deg, #f8ead8, #fff5ec);
+      color:#a16616;
       font-size:12px;
       font-weight:700;
       margin-bottom:14px;
@@ -368,11 +380,11 @@
     }
 
     .band{
-      background:linear-gradient(135deg, #0f5f5c, #0b4543);
+      background:linear-gradient(135deg, #6f4bd8, #9f7aea, #ef8db7);
       color:white;
       border-radius:30px;
       padding:34px;
-      box-shadow:var(--shadow);
+      box-shadow:0 22px 50px rgba(111,75,216,0.24);
     }
 
     .band h3{
@@ -383,7 +395,7 @@
     .band p{
       margin:0;
       line-height:1.9;
-      color:rgba(255,255,255,0.88);
+      color:rgba(255,255,255,0.92);
       font-size:16px;
     }
 
@@ -395,13 +407,13 @@
     }
 
     .band-box{
-      background:rgba(255,255,255,0.10);
-      border:1px solid rgba(255,255,255,0.12);
+      background:rgba(255,255,255,0.14);
+      border:1px solid rgba(255,255,255,0.16);
       border-radius:18px;
       padding:16px;
       line-height:1.7;
       font-size:14px;
-      color:rgba(255,255,255,0.9);
+      color:rgba(255,255,255,0.94);
     }
 
     .credentials-grid{
@@ -430,7 +442,7 @@
     }
 
     .contact-item{
-      background:white;
+      background:rgba(255,255,255,0.85);
       border:1px solid var(--border);
       border-radius:18px;
       padding:18px;
@@ -743,7 +755,7 @@
 
           <div class="contact-item">
             <strong>Website</strong>
-            <a href="https://snehalshirsat.github.io" target="_blank">snehalshirsat.github.io</a>
+            <a href="https://shirsatssnehal.github.io" target="_blank">shirsatssnehal.github.io</a>
           </div>
         </div>
       </div>
