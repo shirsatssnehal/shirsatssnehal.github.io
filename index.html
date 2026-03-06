@@ -1,97 +1,299 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-<title>Snehal Shirsat Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snehal Shirsat | Portfolio Resume</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #eef2f5;
+      color: #1f2937;
+    }
 
-<style>
+    .page {
+      max-width: 1100px;
+      margin: 30px auto;
+      background: white;
+      display: flex;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+      min-height: 100vh;
+    }
 
-body{
-font-family: Arial;
-background:#f5f5f5;
-margin:0;
-}
+    .left {
+      width: 68%;
+      padding: 40px;
+      box-sizing: border-box;
+    }
 
-.container{
-display:flex;
-max-width:1000px;
-margin:auto;
-background:white;
-}
+    .right {
+      width: 32%;
+      background: #0f5f5c;
+      color: white;
+      padding: 35px 28px;
+      box-sizing: border-box;
+    }
 
-.left{
-width:65%;
-padding:40px;
-}
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      color: #111827;
+    }
 
-.right{
-width:35%;
-background:#0b6b63;
-color:white;
-padding:40px;
-}
+    .title {
+      margin-top: 8px;
+      font-size: 18px;
+      color: #0f766e;
+      font-weight: bold;
+    }
 
-</style>
+    .contact-line {
+      margin-top: 14px;
+      font-size: 14px;
+      color: #6b7280;
+    }
 
+    .section {
+      margin-top: 30px;
+    }
+
+    .section h2 {
+      font-size: 16px;
+      color: #111827;
+      border-bottom: 2px solid #dbe3ea;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .summary {
+      line-height: 1.7;
+      color: #374151;
+      font-size: 15px;
+    }
+
+    .job {
+      margin-bottom: 25px;
+    }
+
+    .job-title {
+      font-weight: bold;
+      font-size: 16px;
+      color: #111827;
+    }
+
+    .job-company {
+      color: #0f766e;
+      font-weight: bold;
+      margin-top: 3px;
+    }
+
+    .job-date {
+      color: #6b7280;
+      font-size: 13px;
+      margin-top: 3px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      line-height: 1.6;
+      color: #374151;
+      font-size: 15px;
+    }
+
+    .edu-item {
+      margin-bottom: 16px;
+      line-height: 1.6;
+      color: #374151;
+    }
+
+    .skills {
+      line-height: 1.8;
+      color: #374151;
+      font-size: 15px;
+    }
+
+    .sidebar-section {
+      margin-bottom: 32px;
+    }
+
+    .sidebar-section h3 {
+      margin: 0 0 12px 0;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      border-bottom: 1px solid rgba(255,255,255,0.35);
+      padding-bottom: 8px;
+    }
+
+    .sidebar-section p,
+    .sidebar-section li,
+    .sidebar-section a {
+      color: #eaf4f4;
+      font-size: 14px;
+      line-height: 1.7;
+      text-decoration: none;
+    }
+
+    .sidebar-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .sidebar-list li {
+      margin-bottom: 10px;
+      color: #eaf4f4;
+    }
+
+    .highlight-box {
+      background: rgba(255,255,255,0.08);
+      padding: 12px 14px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .page {
+        flex-direction: column;
+        margin: 0;
+      }
+
+      .left, .right {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
+  <div class="page">
 
-<div class="left">
+    <div class="left">
+      <h1>Snehal Shirsat</h1>
+      <div class="title">Renewable Energy Project Management | Strategic Planning | Team Leadership</div>
+      <div class="contact-line">
+        Chicago, IL | your.email@example.com | linkedin.com/in/snehalshirsat
+      </div>
 
-<h1>Snehal Shirsat</h1>
+      <div class="section">
+        <h2>Professional Summary</h2>
+        <div class="summary">
+          Renewable energy infrastructure professional with experience supporting project coordination,
+          stakeholder management, commercial evaluation, and executive reporting across utility-scale
+          project environments. Currently pursuing doctoral research focused on renewable project
+          feasibility decision-making and strategic infrastructure evaluation.
+        </div>
+      </div>
 
-<h3>Renewable Energy Project Manager</h3>
+      <div class="section">
+        <h2>Experience</h2>
 
-<h2>Summary</h2>
+        <div class="job">
+          <div class="job-title">Project Manager / Project Professional</div>
+          <div class="job-company">Company Name</div>
+          <div class="job-date">Year – Year | City, State</div>
+          <ul>
+            <li>Led coordination across engineering, EPC, commercial, and project stakeholders to support execution priorities.</li>
+            <li>Reviewed change orders and assessed cost and schedule implications for leadership visibility.</li>
+            <li>Prepared structured reports and project summaries highlighting risks, progress, and key decisions.</li>
+            <li>Facilitated meetings and follow-up actions to improve cross-functional alignment and project transparency.</li>
+          </ul>
+        </div>
 
-<p>
-Renewable energy infrastructure professional experienced in project coordination,
-stakeholder management, and renewable energy development.
-</p>
+        <div class="job">
+          <div class="job-title">Project Engineer / Analyst / Coordinator</div>
+          <div class="job-company">Company Name</div>
+          <div class="job-date">Year – Year | City, State</div>
+          <ul>
+            <li>Supported planning, coordination, issue tracking, and project documentation management.</li>
+            <li>Worked with project teams to improve execution visibility and stakeholder communication.</li>
+            <li>Contributed to organized reporting and follow-up processes across multiple project activities.</li>
+          </ul>
+        </div>
+      </div>
 
-<h2>Experience</h2>
+      <div class="section">
+        <h2>Education</h2>
+        <div class="edu-item">
+          <strong>PhD (In Progress)</strong><br>
+          University Name<br>
+          Research focus: Renewable project feasibility decision modeling
+        </div>
+        <div class="edu-item">
+          <strong>Master’s Degree</strong><br>
+          University Name
+        </div>
+        <div class="edu-item">
+          <strong>Bachelor’s Degree</strong><br>
+          University Name
+        </div>
+      </div>
 
-<ul>
+      <div class="section">
+        <h2>Skills</h2>
+        <div class="skills">
+          Project Management • Strategic Planning • Stakeholder Coordination • Executive Reporting •
+          Risk Visibility • Change Order Evaluation • Renewable Energy • Infrastructure Delivery •
+          Cross-Functional Leadership
+        </div>
+      </div>
+    </div>
 
-<li>Coordinated engineering and EPC teams</li>
+    <div class="right">
 
-<li>Evaluated project change orders</li>
+      <div class="sidebar-section">
+        <h3>Core Strengths</h3>
+        <div class="highlight-box">Strategic Problem-Solving</div>
+        <div class="highlight-box">Executive Communication</div>
+        <div class="highlight-box">Cross-Functional Leadership</div>
+        <div class="highlight-box">Stakeholder Alignment</div>
+      </div>
 
-<li>Prepared executive project reports</li>
+      <div class="sidebar-section">
+        <h3>Key Achievements</h3>
+        <ul class="sidebar-list">
+          <li>Supported project delivery through structured coordination and follow-up.</li>
+          <li>Improved visibility into scope, schedule, and project decision points.</li>
+          <li>Contributed to leadership-ready reporting and stakeholder alignment.</li>
+        </ul>
+      </div>
 
-<li>Led cross-functional project meetings</li>
+      <div class="sidebar-section">
+        <h3>Focus Areas</h3>
+        <ul class="sidebar-list">
+          <li>Utility-Scale Renewable Energy</li>
+          <li>Infrastructure Delivery</li>
+          <li>Project Strategy</li>
+          <li>Feasibility Evaluation</li>
+          <li>Decision Support</li>
+        </ul>
+      </div>
 
-</ul>
+      <div class="sidebar-section">
+        <h3>Contact</h3>
+        <p>Chicago, Illinois</p>
+        <p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p><a href="https://www.linkedin.com/in/snehalshirsat/" target="_blank">linkedin.com/in/snehalshirsat</a></p>
+        <p><a href="https://snehalshirsat.github.io" target="_blank">snehalshirsat.github.io</a></p>
+      </div>
 
-<h2>Education</h2>
+      <div class="sidebar-section">
+        <h3>Certifications</h3>
+        <p>Add certifications here</p>
+      </div>
 
-PhD (In Progress)
+    </div>
 
-</div>
-
-<div class="right">
-
-<h3>Strengths</h3>
-
-Leadership  
-<br><br>
-Strategic Thinking  
-<br><br>
-Problem Solving
-
-<h3>Passions</h3>
-
-Renewable Energy  
-<br><br>
-Energy Infrastructure
-
-</div>
-
-</div>
+  </div>
 
 </body>
-
 </html>
